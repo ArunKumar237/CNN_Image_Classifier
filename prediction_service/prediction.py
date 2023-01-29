@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 
 model = tf.keras.models.load_model("model.h5")
-img = Image.open("/config/workspace/artifacts/data_ingestion/PetImages/Cat/0.jpg")
+img = Image.open("/config/workspace/artifacts/data_ingestion/PetImages/Dog/15.jpg")
 img = img.resize((224,224))
 
 
