@@ -6,10 +6,10 @@ import os
 
 class Test_DataIngestion_download:
     data_ingestion_config = DataIngestionConfig(
-        root_dir= os.path.dirname(os.getcwd())+"tests/data/", 
+        root_dir= os.path.dirname(os.getcwd())+"/tests/data/", 
         source_URL="https://raw.githubusercontent.com/c17hawke/raw_data/main/sample_data.zip", 
-        local_data_file= os.path.dirname(os.getcwd())+"tests/data/sample_data.zip", 
-        unzip_dir= os.path.dirname(os.getcwd())+"tests/data/")
+        local_data_file= os.path.dirname(os.getcwd())+"/tests/data/sample_data.zip", 
+        unzip_dir= os.path.dirname(os.getcwd())+"/tests/data/")
 
     def test_download(self):
         data_ingestion = DataIngestion(config=self.data_ingestion_config)
@@ -25,14 +25,14 @@ class Test_DataIngestion_download:
 
 class Test_DataIngestion_unzip:
     data_ingestion_config = DataIngestionConfig(
-        root_dir=os.path.dirname(os.getcwd())+"tests/data/", 
+        root_dir=os.path.dirname(os.getcwd())+"/tests/data/", 
         source_URL="", 
-        local_data_file=os.path.dirname(os.getcwd())+"tests/data/data.zip", 
-        unzip_dir=os.path.dirname(os.getcwd())+"tests/data/")
+        local_data_file=os.path.dirname(os.getcwd())+"/tests/data/data.zip", 
+        unzip_dir=os.path.dirname(os.getcwd())+"/tests/data/")
 
     def test_unzip(self):
         data_ingestion = DataIngestion(config=self.data_ingestion_config)
         data_ingestion.unzip_and_clean()
-        assert os.path.isdir(Path(os.path.dirname(os.getcwd())+"tests/data/PetImages"))
-        assert os.path.isdir(Path(os.path.dirname(os.getcwd())+"tests/data/PetImages/Cat"))
-        assert os.path.isdir(Path(os.path.dirname(os.getcwd())+"tests/data/PetImages/Dog"))
+        assert os.path.isdir(Path(os.path.dirname(os.getcwd())+"/tests/data/PetImages"))
+        assert os.path.isdir(Path(os.path.dirname(os.getcwd())+"/tests/data/PetImages/Cat"))
+        assert os.path.isdir(Path(os.path.dirname(os.getcwd())+"/tests/data/PetImages/Dog"))
