@@ -7,7 +7,7 @@ import os
 class Test_DataIngestion_download:
     data_ingestion_config = DataIngestionConfig(
         root_dir= os.path.dirname(os.getcwd())+"/tests/data/", 
-        source_URL="https://raw.githubusercontent.com/c17hawke/raw_data/main/sample_data.zip", 
+        source_URL="https://raw.githubusercontent.com/ArunKumar237/CNN_Image_Classifier/main/tests/data/sample_data.zip", 
         local_data_file= os.path.dirname(os.getcwd())+"/tests/data/sample_data.zip", 
         unzip_dir= os.path.dirname(os.getcwd())+"/tests/data/")
 
