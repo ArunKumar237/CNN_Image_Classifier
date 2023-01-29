@@ -3,13 +3,12 @@ from deepClassifier.utils import read_yaml
 from pathlib import Path
 from box import ConfigBox
 from ensure.main import EnsureError
-import os
 
 
 class Test_read_yaml:
     yaml_files = [
-        os.path.dirname(os.getcwd())+"/tests/data/empty.yaml",
-        os.path.dirname(os.getcwd())+"/tests/data/demo.yaml"
+        "tests/data/empty.yaml",
+        "tests/data/demo.yaml"
     ]
 
     def test_read_yaml_empty(self):
